@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  display: none !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.location_picker .mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  width: 100%;
+  max-width: unset;
+  box-shadow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.location_picker .mapboxgl-ctrl-geocoder--input {
+  padding-left: 0px;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rmdp-input,
+.rmdp-input:hover,
+.rmdp-input:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.App-link {
-  color: #61dafb;
+.location_picker .mapboxgl-ctrl-geocoder--input:focus {
+  border: none;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.location_picker .mapboxgl-ctrl-geocoder--icon.mapboxgl-ctrl-geocoder--icon-search {
+  display: none;
 }
